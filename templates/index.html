@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Website Change Monitoring</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">Webpage Status</h1>
+        <div id="status-container">
+            <p id="status" class="lead">Checking for changes to webpage... <span
+                    class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></p>
+        </div>
+    </div>
+    <audio id="alarm" src="{{ url_for('static', filename='alarm.mp3') }}"></audio>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
